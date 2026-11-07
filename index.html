@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Парикмахерская в Анапе — цвет, уход, укладка | ЛИНИЯ</title>
+<meta name="description" content="ЛИНИЯ — парикмахерская в Анапе. Сложное окрашивание, уход и укладка. Прайс, мастера, запись.">
+<meta property="og:title" content="ЛИНИЯ — парикмахерская в Анапе">
+<meta property="og:description" content="Два часа — и вы другая.">
+<meta property="og:image" content="assets/media/hero-poster.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FFFFFF;
+  --ink:#0B0B0B;
+  --accent:#E5533D;
+  --soft:rgba(11,11,11,.55);
+  --rule:rgba(11,11,11,.14);
+  --rule-inv:rgba(255,255,255,.18);
+
+  --display:"Oswald","Arial Narrow",Impact,sans-serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+
+  --pad:44px;
+  --container:1320px;
+  --block:clamp(64px,8vw,120px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:600;text-transform:uppercase;letter-spacing:-.01em;line-height:.92}
+p{margin:0}
+.wrap{max-width:var(--container);margin:0 auto;padding:0 var(--pad)}
+.section{padding:var(--block) 0}
+.label{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
+.label--inv{color:rgba(255,255,255,.55)}
+
+/* ---------- bar ---------- */
+.bar{position:fixed;inset:0 0 auto 0;z-index:40;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.bar__in{max-width:var(--container);margin:0 auto;padding:0 var(--pad);height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px;color:#fff}
+.bar.is-solid{background:var(--ink);border-bottom-color:var(--rule-inv)}
+.bar.is-solid .bar__in{color:#fff}
+.bar__mark{font-family:var(--display);font-size:19px;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.bar__mark i{color:var(--accent);font-style:normal}
+.bar__nav{display:flex;gap:22px;font-size:11.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
+.bar__nav a{opacity:.8;transition:opacity .18s}
+.bar__nav a:hover{opacity:1}
+.bar__right{display:flex;align-items:center;gap:16px;font-size:12px;font-weight:500;white-space:nowrap}
+.bar__cta{background:var(--accent);color:#fff;padding:11px 20px;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;transition:background .18s}
+.bar__cta:hover{background:#fff;color:var(--ink)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;color:#fff;isolation:isolate;padding-top:64px}
+.hero__media{position:absolute;inset:0;z-index:-2}
+.hero__media video,.hero__media img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero__scrim{position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(8,8,8,.92) 0%,rgba(8,8,8,.42) 42%,rgba(8,8,8,.15) 70%,rgba(8,8,8,.55) 100%)}
+.hero__top{display:flex;justify-content:space-between;gap:16px;padding:20px var(--pad) 0;font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.hero__bottom{padding:0 var(--pad) clamp(28px,5vh,52px)}
+.hero h1{font-size:clamp(44px,11.2vw,164px);line-height:.86;letter-spacing:-.015em;max-width:13ch;margin-bottom:26px}
+.hero h1 span{display:block;color:var(--accent)}
+.hero__row{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-top:20px;border-top:1px solid rgba(255,255,255,.25)}
+.hero__lede{font-size:14px;color:rgba(255,255,255,.75);max-width:32ch}
+.hero__cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  font:inherit;font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  padding:16px 26px;border:1px solid #fff;background:transparent;color:#fff;
+  cursor:pointer;transition:background .18s,color .18s,border-color .18s;
+}
+.btn:hover{background:#fff;color:var(--ink)}
+.btn--accent{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn--accent:hover{background:#fff;border-color:#fff;color:var(--ink)}
+
+/* ---------- ticker ---------- */
+.ticker{background:var(--ink);color:#fff;border-top:1px solid var(--rule-inv);border-bottom:1px solid var(--rule-inv);overflow:hidden}
+.ticker__row{display:flex;gap:0;white-space:nowrap;animation:slide 28s linear infinite}
+.ticker span{
+  font-family:var(--display);font-size:clamp(16px,1.8vw,22px);font-weight:500;text-transform:uppercase;
+  letter-spacing:.08em;padding:16px 28px;border-right:1px solid var(--rule-inv);flex:0 0 auto;
+}
+.ticker span b{color:var(--accent);font-weight:600}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- services ---------- */
+.svc-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:36px}
+.svc-head h2{font-size:clamp(30px,4.6vw,64px)}
+.svc{border-top:1px solid var(--ink)}
+.svc__row{
+  display:grid;grid-template-columns:56px minmax(0,1fr) auto 150px;gap:20px;align-items:center;
+  padding:22px 0;border-bottom:1px solid var(--rule);
+  transition:background .16s,color .16s;
+}
+.svc__row:hover{background:var(--ink);color:#fff}
+.svc__row:hover .svc__num,.svc__row:hover .svc__meta{color:rgba(255,255,255,.6)}
+.svc__row:hover .svc__price{color:#fff}
+.svc__num{font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--soft)}
+.svc__name{font-family:var(--display);font-size:clamp(22px,3.4vw,44px);font-weight:500;text-transform:uppercase;line-height:1}
+.svc__meta{font-size:11.5px;color:var(--soft);letter-spacing:.02em;white-space:nowrap}
+.svc__price{font-family:var(--display);font-size:clamp(18px,2.2vw,28px);font-weight:500;white-space:nowrap;text-align:right;min-width:0}
+
+
+
+/* ---------- split ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:center}
+.split__media{position:relative}
+.split__media img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.split__stat{
+  position:absolute;right:14px;bottom:14px;background:var(--accent);color:#fff;
+  padding:18px 22px;font-family:var(--display);text-transform:uppercase;line-height:1;
+}
+.split__stat b{display:block;font-size:38px;font-weight:600}
+.split__stat span{display:block;font-size:10.5px;letter-spacing:.14em;margin-top:6px}
+.split h2{font-size:clamp(28px,4vw,56px);margin-bottom:20px}
+.split p{color:var(--soft);max-width:44ch;margin-bottom:14px}
+.split ul{list-style:none;padding:0;margin:24px 0 0;border-top:1px solid var(--rule)}
+.split li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--rule);font-size:13px}
+.split li b{font-family:var(--display);text-transform:uppercase;letter-spacing:.04em;font-weight:500}
+
+/* ---------- black band ---------- */
+.band{background:var(--ink);color:#fff}
+.band h2{font-size:clamp(30px,5vw,72px);margin-bottom:32px}
+.nums{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--rule-inv)}
+.nums div{padding:26px 20px 0 0;border-right:1px solid var(--rule-inv)}
+.nums div:last-child{border-right:0}
+.nums b{display:block;font-family:var(--display);font-size:clamp(36px,5vw,72px);font-weight:600;line-height:.9}
+.nums span{display:block;margin-top:12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+
+/* ---------- masters ---------- */
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+.member{position:relative;overflow:hidden}
+.member img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:grayscale(1) contrast(1.08);transition:filter .35s,transform .5s}
+.member:hover img{filter:grayscale(0);transform:scale(1.03)}
+.member__cap{position:absolute;left:0;right:0;bottom:0;padding:16px;background:linear-gradient(to top,rgba(0,0,0,.85),transparent);color:#fff}
+.member__cap h3{font-size:24px;font-weight:500}
+.member__cap p{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:4px}
+
+/* ---------- strip gallery ---------- */
+.strip{display:flex;gap:14px;overflow-x:auto;padding:36px var(--pad) 8px;scroll-snap-type:x mandatory}
+.strip::-webkit-scrollbar{height:4px}
+.strip::-webkit-scrollbar-thumb{background:var(--ink)}
+.strip figure{margin:0;flex:0 0 auto;scroll-snap-align:start}
+.strip img{height:clamp(220px,32vw,380px);width:auto;object-fit:cover}
+.strip figcaption{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);margin-top:10px}
+
+/* ---------- reviews ---------- */
+.revs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px)}
+.rev{border-top:1px solid var(--rule-inv);padding-top:20px}
+.rev p{font-family:var(--display);font-size:clamp(20px,2.6vw,32px);font-weight:400;line-height:1.16;text-transform:none}
+.rev footer{margin-top:16px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.stars{color:var(--accent);letter-spacing:3px;font-size:12px;display:block;margin-bottom:12px}
+
+/* ---------- booking ---------- */
+.book{background:var(--accent);color:#fff}
+.book__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:start}
+.book h2{font-size:clamp(30px,4.6vw,64px);margin-bottom:18px}
+.book p{color:rgba(255,255,255,.82);max-width:36ch}
+form{display:grid;gap:14px}
+.field{display:grid;gap:6px}
+.field label{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.field input,.field select{
+  font:inherit;font-size:15px;color:#fff;background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.4);padding:14px;border-radius:0;transition:border-color .18s,background .18s;
+}
+.field input::placeholder{color:rgba(255,255,255,.55)}
+.field input:focus,.field select:focus{outline:none;border-color:#fff;background:rgba(255,255,255,.16)}
+.field select option{color:var(--ink)}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:12px;color:rgba(255,255,255,.8);line-height:1.5}
+.check input{margin-top:3px;accent-color:#fff}
+.book .btn{background:#0B0B0B;border-color:#0B0B0B;justify-self:start;color:#fff}
+.book .btn:hover{background:#fff;color:var(--ink);border-color:#fff}
+
+/* ---------- contacts ---------- */
+.contacts{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,5vw,72px);align-items:start}
+.contacts h2{font-size:clamp(28px,4vw,56px);margin-bottom:24px}
+.clist{border-top:1px solid var(--ink)}
+.clist div{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:14px}
+.clist b{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);font-weight:600;padding-top:3px}
+.map{aspect-ratio:1/1;border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+
+/* ---------- footer ---------- */
+.foot{background:var(--ink);color:#fff;padding:44px 0 56px}
+.foot__top{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;padding-bottom:26px;border-bottom:1px solid var(--rule-inv)}
+.foot__mark{font-family:var(--display);font-size:clamp(30px,4vw,52px);text-transform:uppercase;letter-spacing:.04em}
+.foot__links{display:flex;gap:22px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+.foot__links a:hover{color:#fff}
+.foot__note{margin-top:22px;font-size:11px;color:rgba(255,255,255,.42)}
+
+/* ---------- dock ---------- */
+.dock{position:fixed;inset:auto 0 0 0;z-index:45;display:none;background:var(--ink);padding:10px 12px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--rule-inv)}
+.dock__row{display:flex;gap:8px}
+.dock a{flex:1;text-align:center;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:13px 6px;border:1px solid rgba(255,255,255,.3);color:#fff}
+.dock a.primary{background:var(--accent);border-color:var(--accent)}
+
+@media (max-width:1080px){
+  :root{--pad:24px}
+  .split,.revs,.book__grid,.contacts{grid-template-columns:1fr}
+  .nums{grid-template-columns:1fr 1fr}
+  .nums div{border-right:0;border-bottom:1px solid var(--rule-inv);padding-bottom:20px}
+  .team{grid-template-columns:1fr 1fr}
+  .svc__row{grid-template-columns:36px minmax(0,1fr) auto;gap:12px}
+  .svc__meta{display:none}
+}
+@media (max-width:760px){
+  :root{--pad:18px}
+  .bar__nav,.bar__right .bar__phone{display:none}
+  .hero h1{font-size:clamp(40px,13vw,64px)}
+  .hero__lede{display:none}
+  .team{grid-template-columns:1fr}
+  .split__stat{right:8px;bottom:8px}
+  .dock{display:block}
+  body{padding-bottom:64px}
+  .ticker__row{animation:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero__media video{display:none}
+  .hero__media{background:url("assets/media/hero-poster.jpg") center 40%/cover no-repeat}
+  .ticker__row{animation:none}
+  .member:hover img{transform:none}
+}
+</style>
+  <link rel="stylesheet" href="assets/booking.css">
+  <link rel="stylesheet" href="assets/gift.css">
+</head>
+<body>
+
+<header class="bar" id="bar">
+  <div class="bar__in">
+    <div class="bar__mark">ЛИНИЯ<i>.</i></div>
+    <nav class="bar__nav">
+      <a href="#services">Услуги</a>
+      <a href="#masters">Мастера</a>
+      <a href="#work">Работы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="bar__right">
+      <a class="bar__phone" href="tel:+79000000000">+7 900 000-00-00</a>
+      <a class="bar__cta" href="#booking">Записаться</a>
+    </div>
+  </div>
+</header>
+
+<!-- первый экран -->
+<section class="hero">
+  <div class="hero__media">
+    <img id="poster" src="assets/media/hero-poster.jpg" alt="">
+    <video id="vid" muted loop playsinline preload="auto" poster="assets/media/hero-poster.jpg" aria-hidden="true"></video>
+  </div>
+  <div class="hero__scrim"></div>
+
+  <div class="hero__top">
+    <span>Парикмахерская · Анапа</span>
+    <span>Парковая · с 2016</span>
+  </div>
+
+  <div class="hero__bottom">
+    <h1>Два часа — <span>и вы другая</span></h1>
+    <div class="hero__row">
+      <p class="hero__lede">Окрашивание, уход и укладка. Считаем стоимость до начала работы.</p>
+      <div class="hero__cta">
+        <a class="btn btn--accent" href="#booking">Записаться</a>
+        <a class="btn" href="#gift">Подарочные карты</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- бегущая строка -->
+<div class="ticker">
+  <div class="ticker__row">
+    <span>Окрашивание <b>от 4 500 ₽</b></span>
+    <span>Уход <b>от 2 800 ₽</b></span>
+    <span>Стрижка <b>от 1 800 ₽</b></span>
+    <span>Укладка <b>от 1 500 ₽</b></span>
+    <span>Мужской зал <b>от 1 200 ₽</b></span>
+    <span>Маникюр <b>от 1 900 ₽</b></span>
+    <span>Окрашивание <b>от 4 500 ₽</b></span>
+    <span>Уход <b>от 2 800 ₽</b></span>
+    <span>Стрижка <b>от 1 800 ₽</b></span>
+    <span>Укладка <b>от 1 500 ₽</b></span>
+    <span>Мужской зал <b>от 1 200 ₽</b></span>
+    <span>Маникюр <b>от 1 900 ₽</b></span>
+  </div>
+</div>
+
+<!-- услуги -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="svc-head">
+      <h2>Услуги</h2>
+      <div class="label">Прайс · материалы включены</div>
+    </div>
+    <div class="svc">
+      <div class="svc__row">
+        <div class="svc__num">01</div>
+        <div class="svc__name">Сложное окрашивание</div>
+        <div class="svc__meta">3 часа · блонд, тонирование</div>
+        <div class="svc__price">от 4 500 ₽</div>
+      </div>
+      <div class="svc__row">
+        <div class="svc__num">02</div>
+        <div class="svc__name">Уход и восстановление</div>
+        <div class="svc__meta">1 ч 30 мин · по показаниям</div>
+        <div class="svc__price">от 2 800 ₽</div>
+      </div>
+      <div class="svc__row">
+        <div class="svc__num">03</div>
+        <div class="svc__name">Женская стрижка</div>
+        <div class="svc__meta">1 час · форма без укладки</div>
+        <div class="svc__price">от 1 800 ₽</div>
+      </div>
+      <div class="svc__row">
+        <div class="svc__num">04</div>
+        <div class="svc__name">Укладка и причёска</div>
+        <div class="svc__meta">45 мин · вечер, событие</div>
+        <div class="svc__price">от 1 500 ₽</div>
+      </div>
+      <div class="svc__row">
+        <div class="svc__num">05</div>
+        <div class="svc__name">Мужской зал</div>
+        <div class="svc__meta">40 мин · стрижка, борода</div>
+        <div class="svc__price">от 1 200 ₽</div>
+      </div>
+      <div class="svc__row">
+        <div class="svc__num">06</div>
+        <div class="svc__name">Маникюр и покрытие</div>
+        <div class="svc__meta">1 ч 15 мин · гель-лак</div>
+        <div class="svc__price">от 1 900 ₽</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- о салоне -->
+<section class="section" style="padding-top:0">
+  <div class="wrap split">
+    <div class="split__media">
+      <img src="assets/img/interior.jpg" alt="Интерьер парикмахерской ЛИНИЯ" loading="lazy">
+      <div class="split__stat"><b>9</b><span>лет в Анапе</span></div>
+    </div>
+    <div>
+      <div class="label" style="margin-bottom:14px">О салоне</div>
+      <h2>Сначала разбираемся, потом предлагаем</h2>
+      <p>Мы начинали как парикмахерская на две точки. Правило с тех пор одно: если окрашивание не нужно — так и говорим.</p>
+      <p>Свой колорист занимается сложными техниками, уход подбираем по показаниям, мужской зал — отдельная зона со своим мастером.</p>
+      <ul>
+        <li><b>Колорист в штате</b><span>с 2018 года</span></li>
+        <li><b>Расчёт до работы</b><span>фиксируем сумму</span></li>
+        <li><b>Мужской зал</b><span>отдельная зона</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- чёрная полоса с цифрами -->
+<section class="section band">
+  <div class="wrap">
+    <div class="label label--inv" style="margin-bottom:14px">В цифрах</div>
+    <h2>Девять лет<br>на Парковой</h2>
+    <div class="nums">
+      <div><b>5 500</b><span>клиентов</span></div>
+      <div><b>6</b><span>мастеров</span></div>
+      <div><b>96%</b><span>по рекомендации</span></div>
+      <div><b>2 ч</b><span>средний визит</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- мастера -->
+<section class="section" id="masters">
+  <div class="wrap">
+    <div class="svc-head">
+      <h2>Мастера</h2>
+      <div class="label">Запись к конкретному мастеру</div>
+    </div>
+    <div class="team">
+      <article class="member">
+        <img src="assets/img/master-f.jpg" alt="Анна, колорист" loading="lazy">
+        <div class="member__cap"><h3>Анна</h3><p>Колорист</p></div>
+      </article>
+      <article class="member">
+        <img src="assets/img/master-f2.jpg" alt="Ирина, стилист" loading="lazy">
+        <div class="member__cap"><h3>Ирина</h3><p>Стилист</p></div>
+      </article>
+      <article class="member">
+        <img src="assets/img/master-m.jpg" alt="Дмитрий, барбер" loading="lazy">
+        <div class="member__cap"><h3>Дмитрий</h3><p>Барбер</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- работы -->
+<section class="section" id="work" style="padding-top:0">
+  <div class="wrap">
+    <div class="svc-head">
+      <h2>Работы</h2>
+      <div class="label">Листайте вбок</div>
+    </div>
+  </div>
+  <div class="strip">
+    <figure><img src="assets/img/coloring.jpg" alt="Окрашивание" loading="lazy"><figcaption>Окрашивание</figcaption></figure>
+    <figure><img src="assets/img/cutting.jpg" alt="Стрижка" loading="lazy"><figcaption>Стрижка</figcaption></figure>
+    <figure><img src="assets/img/hero-hair.jpg" alt="Уход" loading="lazy"><figcaption>Уход</figcaption></figure>
+    <figure><img src="assets/img/brows.jpg" alt="Брови" loading="lazy"><figcaption>Брови</figcaption></figure>
+    <figure><img src="assets/img/nails.jpg" alt="Маникюр" loading="lazy"><figcaption>Маникюр</figcaption></figure>
+    <figure><img src="assets/img/station.jpg" alt="Зал" loading="lazy"><figcaption>Зал</figcaption></figure>
+  </div>
+</section>
+
+<!-- отзывы -->
+<section class="section band">
+  <div class="wrap">
+    <div class="svc-head">
+      <h2>Отзывы</h2>
+      <div class="label label--inv">Яндекс.Карты · 2ГИС</div>
+    </div>
+    <div class="revs">
+      <article class="rev">
+        <span class="stars">★★★★★</span>
+        <p>«Пришла с рыжиной после домашнего окрашивания — ушла с ровным холодным блондом».</p>
+        <footer>Марина</footer>
+      </article>
+      <article class="rev">
+        <span class="stars">★★★★★</span>
+        <p>«Стрижка держится третий месяц, укладываю за пять минут».</p>
+        <footer>Ольга</footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- запись -->
+<section class="section book bk-section" id="booking">
+  <div class="wrap">
+    <div class="bk" style="--bk-text:#fff;--bk-soft:rgba(255,255,255,.82);--bk-line:rgba(255,255,255,.42);--bk-accent:#0B0B0B;--bk-radius:0">
+      <div class="bk__head">
+        <div class="bk__label">Запись</div>
+        <h2 class="bk__title">Выберите день и время</h2>
+        <p class="bk__sub">Свободные слоты обновляются каждый день. Перезвоним в течение 15 минут в рабочие часы и подтвердим.</p>
+      </div>
+      <div class="bk__grid">
+        <div>
+          <div class="bk__days-head"><span class="bk__month">выберите дату</span><span class="bk__month">14 дней</span></div>
+          <div class="bk__days"></div>
+          <div class="bk__slots-head">Свободное время</div>
+          <div class="bk__slots"></div>
+        </div>
+        <form class="bk__form">
+          <div class="bk__row">
+            <label class="bk__field"><span>Имя</span><input type="text" placeholder="Как к вам обращаться" required></label>
+            <label class="bk__field"><span>Телефон</span><input type="tel" placeholder="+7 (___) ___-__-__" required></label>
+          </div>
+          <label class="bk__field"><span>Услуга</span>
+            <select>
+              <option>Сложное окрашивание</option>
+                <option>Уход и восстановление</option>
+                <option>Женская стрижка</option>
+                <option>Укладка и причёска</option>
+                <option>Мужской зал</option>
+                <option>Маникюр и покрытие</option>
+            </select>
+          </label>
+          <div class="bk__summary">Выберите день и время</div>
+          <button class="bk__submit" type="submit" disabled>Записаться</button>
+          <p class="bk__note">Демонстрационная форма — данные никуда не отправляются.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section gc-section" id="gift">
+  <div class="wrap">
+    <div class="gc" style="--gc-text:#0B0B0B;--gc-soft:rgba(11,11,11,.55);--gc-line:rgba(11,11,11,.18);--gc-accent:#E5533D;--gc-radius:0;--gc-display:var(--display)">
+      <div class="gc__grid">
+        <div>
+          <div class="gc__label">Подарочные карты</div>
+          <h2 class="gc__title">Подарок, который не нужно угадывать</h2>
+          <p class="gc__sub">Сертификат на любые услуги салона: человек сам выберет окрашивание, уход или укладку. Действует 6 месяцев.</p>
+          <div class="gc__amounts">
+            <button class="gc__amount" type="button" data-amount="3000" aria-pressed="true">3 000 ₽</button>
+            <button class="gc__amount" type="button" data-amount="5000" aria-pressed="false">5 000 ₽</button>
+            <button class="gc__amount" type="button" data-amount="10000" aria-pressed="false">10 000 ₽</button>
+            <button class="gc__amount" type="button" data-amount="15000" aria-pressed="false">15 000 ₽</button>
+          </div>
+          <form class="gc__form">
+            <div class="gc__row">
+              <label class="gc__field"><span>Имя</span><input type="text" data-gc="name" placeholder="Кому дарим" required></label>
+              <label class="gc__field"><span>Телефон</span><input type="tel" data-gc="phone" placeholder="+7 (___) ___-__-__" required></label>
+            </div>
+            <button class="gc__submit" type="submit">Оформить</button>
+            <p class="gc__note">Демонстрационная форма — данные никуда не отправляются.</p>
+          </form>
+        </div>
+        <div class="gc__card">
+          <div class="gc__brand">ЛИНИЯ.</div>
+          <div class="gc__middle">
+            <div class="gc__sum">3 000 ₽</div>
+            <div class="gc__caption">на любые услуги салона</div>
+          </div>
+          <div class="gc__foot"><span>Действует 6 месяцев</span><span>Сертификат</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- контакты -->
+<section class="section" id="contacts">
+  <div class="wrap contacts">
+    <div>
+      <div class="label" style="margin-bottom:14px">Контакты</div>
+      <h2>Анапа,<br>ул. Парковая</h2>
+      <div class="clist">
+        <div><b>Адрес</b><span>Анапа, ул. Парковая (демонстрационный)</span></div>
+        <div><b>Телефон</b><span><a href="tel:+79000000000">+7 900 000-00-00</a></span></div>
+        <div><b>Часы</b><span>ежедневно, 9:00–21:00</span></div>
+        <div><b>Связь</b><span>WhatsApp · Telegram</span></div>
+      </div>
+    </div>
+    <div class="map">Карта города — подключается при публикации</div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div class="foot__mark">ЛИНИЯ<span style="color:var(--accent)">.</span></div>
+      <div class="foot__links">
+        <a href="#services">Услуги</a>
+        <a href="#masters">Мастера</a>
+        <a href="#work">Работы</a>
+        <a href="#booking">Записаться</a>
+      </div>
+    </div>
+    <div class="foot__note">Демонстрационный макет. Название, адрес и телефон вымышлены; цены — ориентировочные по городу.</div>
+  </div>
+</footer>
+
+<div class="dock">
+  <div class="dock__row">
+    <a href="tel:+79000000000">Позвонить</a>
+    <a href="#contacts">WhatsApp</a>
+    <a class="primary" href="#booking">Записаться</a>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HairSalon","name":"ЛИНИЯ","description":"Парикмахерская в Анапе: окрашивание, уход, стрижки и укладка.","telephone":"+7 900 000-00-00","address":{"@type":"PostalAddress","addressLocality":"Анапа","addressCountry":"RU"},"openingHours":"Mo-Su 09:00-21:00","priceRange":"₽₽"}
+</script>
+
+<script>
+(function(){
+  var bar = document.getElementById('bar');
+  var onScroll = function(){ bar.classList.toggle('is-solid', window.scrollY > 30); };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  var vid = document.getElementById('vid');
+  function pick(){ return window.matchMedia('(max-width: 760px)').matches ? 'assets/media/hero-9x16.mp4' : 'assets/media/hero-16x9.mp4'; }
+  function load(){
+    var src = pick();
+    if (vid.dataset.src === src) return;
+    vid.dataset.src = src; vid.innerHTML = '';
+    var s = document.createElement('source'); s.src = src; s.type = 'video/mp4';
+    vid.appendChild(s); vid.load();
+    var p = vid.play(); if (p && p.catch) p.catch(function(){});
+  }
+  load();
+  var t; window.addEventListener('resize', function(){ clearTimeout(t); t = setTimeout(load, 250); });
+
+  document.getElementById('book').addEventListener('submit', function(e){
+    e.preventDefault();
+    var n = document.getElementById('n'), p = document.getElementById('p'), a = document.getElementById('a');
+    if (!n.value.trim() || !p.value.trim() || !a.checked) {
+      [n,p].forEach(function(i){ i.style.borderColor = i.value.trim() ? 'rgba(255,255,255,.4)' : '#0B0B0B'; });
+      return;
+    }
+    var b = this.querySelector('button');
+    b.textContent = 'Заявка отправлена'; b.disabled = true; b.style.opacity = '.7';
+  });
+})();
+</script>
+  <script src="assets/booking.js"></script>
+  <script src="assets/gift.js"></script>
+</body>
+</html>
